@@ -1,0 +1,11 @@
+function Card({ children, className = "" }) {
+  return (
+    <div
+      className={`bg-slate-800 border border-slate-700 rounded-2xl p-6 hover:border-blue-500 transition ${className}`}
+    >
+      {children}
+    </div>
+  );
+}
+
+export default Card;
