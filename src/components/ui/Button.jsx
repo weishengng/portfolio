@@ -2,6 +2,7 @@ function Button({
   children,
   href,
   variant = "primary",
+  download = false,
 }) {
   const base =
     "inline-flex items-center justify-center rounded-xl px-6 py-3 font-semibold transition";
@@ -14,19 +15,26 @@ function Button({
       "border border-blue-500 hover:bg-blue-500 text-white",
   };
 
-  if (href) {
+    if (href) {
+
+    const newTab =
+        href.startsWith("http") || href.endsWith(".pdf");
+
     return (
-      <a
+        <a
         href={href}
+        target={newTab ? "_blank" : undefined}
+        rel={newTab ? "noopener noreferrer" : undefined}
+        download={download}
         className={`${base} ${styles[variant]}`}
-      >
+        >
         {children}
-      </a>
+        </a>
     );
-  }
+    }
 
   return (
-    <button className={`${base} ${styles[variant]}`}>
+    <button type="button" className={`${base} ${styles[variant]}`}>
       {children}
     </button>
   );
