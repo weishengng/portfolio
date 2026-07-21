@@ -5,8 +5,8 @@ const projects = [
     description:
       "A modern portfolio built with React, Vite and Tailwind CSS to showcase my projects and technical skills.",
     tech: ["React", "Tailwind CSS", "Vite"],
-    github: "#",
-    demo: "#",
+    github: "https://weishengng.github.io/portfolio/#projects",
+    demo: "https://weishengng.github.io/portfolio/",
   },
   {
     id: 2,

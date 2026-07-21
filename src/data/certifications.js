@@ -11,6 +11,12 @@ const certifications = [
     issuer: "Google",
     year: "2026",
   },
+  {
+    id: 3,
+    name: "Google IT Support Professional Certificate",
+    issuer: "Google",
+    year: "2026",
+  },
 ];
 
 export default certifications;

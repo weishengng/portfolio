@@ -10,7 +10,7 @@ const about = {
 
   location: "Malaysia",
 
-  email: "your@email.com",
+  email: "weishengng88@gmail.com",
 };
 
 export default about;

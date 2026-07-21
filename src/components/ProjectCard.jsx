@@ -1,11 +1,12 @@
 import Card from "./ui/Card";
+import Badge from "./ui/Badge";
 
 function ProjectCard({ project }) {
   return (
     <Card>
 
-      <div className="h-48 bg-slate-700 flex items-center justify-center">
-        <span className="text-slate-400">Project Screenshot</span>
+      <div className="h-48 bg-gradient-to-br from-slate-800 to-slate-700 flex items-center justify-center">
+          <span className="text-6xl">💻</span>
       </div>
 
       <div className="p-6">
@@ -19,32 +20,37 @@ function ProjectCard({ project }) {
         </p>
 
         <div className="flex flex-wrap gap-2 mt-6">
-          {project.tech.map((tech) => (
-            <span
-              key={tech}
-              className="px-3 py-1 rounded-full bg-blue-600/20 text-blue-300 text-sm"
-            >
-              {tech}
-            </span>
-          ))}
+        {project.tech.map((tech) => (
+          <Badge key={tech}>
+            {tech}
+          </Badge>
+        ))}
         </div>
 
         <div className="flex gap-6 mt-8">
 
-          <a
-            href={project.github}
-            className="text-blue-400 hover:text-blue-300"
-          >
-            GitHub →
-          </a>
+          {project.github !== "#" && (
+            <a
+                href={project.github}
+                target="https://github.com/weishengng/portfolio"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:text-blue-300"
+            >
+              GitHub →
+            </a>
+          )}
 
-          <a
-            href={project.demo}
-            className="text-blue-400 hover:text-blue-300"
-          >
-            Live Demo →
-          </a>
-
+          {project.demo !== "#" && (
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-300"
+            >
+              Live Demo →
+            </a>
+          )}
+          
         </div>
 
       </div>
