@@ -1,11 +1,14 @@
+import portfolioImg from "../assets/projects/portfolio.jpg";
+
 const projects = [
   {
     id: 1,
     title: "Portfolio Website",
+    image: portfolioImg,
     description:
       "A modern portfolio built with React, Vite and Tailwind CSS to showcase my projects and technical skills.",
     tech: ["React", "Tailwind CSS", "Vite"],
-    github: "https://weishengng.github.io/portfolio/#projects",
+    github: "https://github.com/weishengng/portfolio",
     demo: "https://weishengng.github.io/portfolio/",
   },
   {

@@ -1,7 +1,6 @@
 import Button from "./ui/Button";
 import profile from "../assets/profile.jpg";
 import Badge from "./ui/Badge";
-
 const skills = [
   "☁ AWS",
   "🐧 Linux",
@@ -9,10 +8,11 @@ const skills = [
   "🗄 SQL",
   "⚛ React",
 ];
-
 function Hero() {
   return (
-    <section className="min-h-screen bg-slate-950 text-white flex items-center">
+    <section 
+      id="home"
+      className="min-h-screen bg-slate-950 text-white flex items-center">
       <div className="max-w-7xl mx-auto w-full px-8">
 
         <div className="grid lg:grid-cols-2 gap-20 items-center">

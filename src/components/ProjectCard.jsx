@@ -5,9 +5,11 @@ function ProjectCard({ project }) {
   return (
     <Card>
 
-      <div className="h-48 bg-gradient-to-br from-slate-800 to-slate-700 flex items-center justify-center">
-          <span className="text-6xl">💻</span>
-      </div>
+      <img
+        src={project.image}
+        alt={project.title}
+        className="w-full h-48 object-cover rounded-t-xl transition-transform duration-300 hover:scale-105"
+      />
 
       <div className="p-6">
 
@@ -32,11 +34,11 @@ function ProjectCard({ project }) {
           {project.github !== "#" && (
             <a
                 href={project.github}
-                target="https://github.com/weishengng/portfolio"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-400 hover:text-blue-300"
             >
-              GitHub →
+              GitHub →  
             </a>
           )}
 

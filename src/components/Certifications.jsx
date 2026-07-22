@@ -11,7 +11,7 @@ function Certifications() {
           Certifications
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 items-start">
 
           {certifications.map((certification) => (
             <CertificationCard
