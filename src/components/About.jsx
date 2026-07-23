@@ -24,30 +24,42 @@ function About() {
               {about.title}
             </p>
 
-            <p className="mt-8 text-slate-300 leading-8">
-              {about.description}
-            </p>
+            <div className="mt-8 space-y-6">
+              {about.description.map((paragraph, index) => (
+                <p
+                  key={index}
+                  className="text-slate-300 text-lg leading-8"
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </div>
 
           </div>
 
           <div className="space-y-6">
 
-            <div className="bg-slate-800 rounded-2xl p-6">
-              <h4 className="font-bold text-blue-400">
-                Education
+            <div className="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300">
+              <h4 className="font-bold text-blue-400 mb-3">
+                🎓 Education
               </h4>
 
-              <p>{about.education}</p>
+              <p className="text-lg font-semibold">
+                {about.education}
+              </p>
 
-              <p className="text-slate-400">
+              <p className="text-slate-400 mt-1">
                 {about.university}
               </p>
 
+              <p className="text-sm text-slate-500 mt-3">
+                {about.year}
+              </p>
             </div>
 
-            <div className="bg-slate-800 rounded-2xl p-6">
+            <div className="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300">
               <h4 className="font-bold text-blue-400">
-                Location
+                📍Location
               </h4>
 
               <p>{about.location}</p>

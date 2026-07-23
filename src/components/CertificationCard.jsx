@@ -7,7 +7,7 @@ import { useState } from "react";
 function CertificationCard({ certification }) {
   const [expanded, setExpanded] = useState(false);
   return (
-    <Card>
+    <Card className="group hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/10">
 
       {certification.badge && (
         <img
@@ -66,6 +66,7 @@ function CertificationCard({ certification }) {
           {certification.credential && (
           <Button
             href={certification.credential}
+            variant="outline"
             className="mt-5"
           >
             View Credential

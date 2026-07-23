@@ -21,22 +21,21 @@ function Hero() {
 
           <div>
 
-            <p className="text-blue-400 text-lg font-medium">
+            <p className="text-blue-400 text-base font-semibold uppercase tracking-widest">
               👋 Hello, I'm
             </p>
 
-            <h1 className="text-7xl lg:text-8xl font-black mt-4 leading-none">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-black mt-4 leading-none">
               Wei Sheng
             </h1>
 
             <h2 className="mt-6 text-3xl text-slate-300 font-semibold">
               <span className="block">AWS Certified Cloud Practitioner</span>
-              <span className="block mt-2">IT Graduate • Cloud & IT Support</span>
+              <span className="block mt-2">Cloud Support • IT Operations • System Administration</span>
             </h2>
 
-            <p className="mt-8 text-slate-400 text-xl leading-9 max-w-xl">
-              IT graduate with hands-on experience in AWS, Linux, Python, SQL, and technical support. Passionate about building cloud solutions and solving real-world technical problems.
-            </p>
+            <p className="mt-8 text-slate-400 text-xl leading-9 max-w-2xl">
+                Recent Information Technology graduate from Brigham Young University–Hawaii with hands-on experience in AWS, Linux, Python, SQL, and technical support. Passionate about cloud computing, IT operations, and building reliable technology solutions while continuously learning new skills.            </p>
 
             <div className="flex flex-wrap gap-3 mt-8">
               {skills.map((skill) => (
@@ -52,10 +51,42 @@ function Hero() {
                 View Projects
               </Button>
 
-              <Button href={`${import.meta.env.BASE_URL}resume.pdf`} variant="secondary">
+              <Button
+                href={`${import.meta.env.BASE_URL}resume.pdf`}
+                variant="secondary"
+                download
+              >
                 Download Resume
               </Button>
 
+              <div className="flex flex-wrap gap-6 mt-8 text-slate-400">
+
+                <a
+                  href="https://github.com/weishengng"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-400 transition"
+                >
+                  GitHub
+                </a>
+
+                <a
+                  href="https://linkedin.com/in/weisheng-ng"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-400 transition"
+                >
+                  LinkedIn
+                </a>
+
+                <a
+                  href="mailto:weishengng88@gmail.com"
+                  className="hover:text-blue-400 transition"
+                >
+                  Email
+                </a>
+
+              </div>
             </div>
 
           </div>
@@ -64,12 +95,12 @@ function Hero() {
 
           <div className="flex justify-center">
 
-            <div className="w-75 h-75 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center shadow-2xl">
+            <div className="relative">
 
             <img
               src={profile}
               alt="Wei Sheng Ng"
-              className="w-72 h-72 rounded-full object-cover border-4 border-blue-500 shadow-2xl"
+              className="w-72 h-72 md:w-80 md:h-80 rounded-full object-cover border-4 border-blue-500 shadow-[0_0_60px_rgba(59,130,246,0.35)]"
             />
 
             </div>
