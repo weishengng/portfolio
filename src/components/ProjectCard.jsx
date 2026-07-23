@@ -2,7 +2,7 @@ import Card from "./ui/Card";
 import Badge from "./ui/Badge";
 import Button from "./ui/Button";
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, onLearnMore }) {
   return (
     <Card className="group hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/10">
 
@@ -35,7 +35,7 @@ function ProjectCard({ project }) {
         </h4>
 
         <ul className="mt-3 space-y-2">
-          {project.features.map((feature, index) => (
+          {project.features.slice(0, 2).map((feature, index) => (
             <li key={index} className="flex items-start gap-3">
               <span className="mt-2 h-2 w-2 rounded-full bg-blue-500 flex-shrink-0"></span>
               <span className="text-slate-300">
@@ -45,15 +45,7 @@ function ProjectCard({ project }) {
           ))}
         </ul>
 
-        <div className="flex flex-wrap gap-2 mt-6">
-          {project.tech.map((tech) => (
-            <Badge key={tech}>
-              {tech}
-            </Badge>
-          ))}
-        </div>
-
-        <div className="flex gap-3 mt-8">
+        <div className="flex flex-wrap items-center gap-3 mt-8">
 
           {project.demo !== "#" && (
             <Button href={project.demo}>
@@ -68,9 +60,20 @@ function ProjectCard({ project }) {
             >
               GitHub
             </Button>
+
+            
           )}
 
+          <button
+            onClick={onLearnMore}
+            className="text-blue-400 hover:text-blue-300 font-medium transition"
+          >
+            Learn More →
+          </button>
+
         </div>
+
+        
 
       </div>
     </Card>

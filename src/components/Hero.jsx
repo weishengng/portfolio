@@ -1,6 +1,17 @@
 import Button from "./ui/Button";
 import profile from "../assets/profile.jpg";
 import Badge from "./ui/Badge";
+import {
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
+
+import {
+  HiOutlineClipboardCopy,
+  HiCheck,
+} from "react-icons/hi";
+import { useState } from "react";
+
 const skills = [
   "☁ AWS",
   "🐧 Linux",
@@ -9,6 +20,22 @@ const skills = [
   "⚛ React",
 ];
 function Hero() {
+  
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText("weishengng88@gmail.com");
+      setCopied(true);
+
+      setTimeout(() => {
+        setCopied(false);
+      }, 2000);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   return (
     <section 
       id="home"
@@ -45,6 +72,7 @@ function Hero() {
               ))}
             </div>
 
+            {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 mt-10">
 
               <Button href="#projects">
@@ -59,34 +87,48 @@ function Hero() {
                 Download Resume
               </Button>
 
-              <div className="flex flex-wrap gap-6 mt-8 text-slate-400">
+            </div>
 
-                <a
-                  href="https://github.com/weishengng"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-blue-400 transition"
-                >
-                  GitHub
-                </a>
+            {/* Social Links */}
+            <div className="flex flex-wrap items-center gap-6 mt-8 text-slate-400">
 
-                <a
-                  href="https://linkedin.com/in/weisheng-ng"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-blue-400 transition"
-                >
-                  LinkedIn
-                </a>
+              <a
+                href="https://github.com/weishengng"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-blue-400 transition-colors duration-200"
+              >
+                <FaGithub size={18} />
+                <span>GitHub</span>
+              </a>
 
-                <a
-                  href="mailto:weishengng88@gmail.com"
-                  className="hover:text-blue-400 transition"
-                >
-                  Email
-                </a>
+              <a
+                href="https://linkedin.com/in/weisheng-ng"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 hover:text-blue-400 transition-colors duration-200"
+              >
+                <FaLinkedin size={18} />
+                <span>LinkedIn</span>
+              </a>
 
-              </div>
+              <button
+                onClick={copyEmail}
+                className="flex items-center gap-2 hover:text-blue-400 transition-colors duration-200"
+              >
+                {copied ? (
+                  <>
+                    <HiCheck size={18} />
+                    <span>Email Copied!</span>
+                  </>
+                ) : (
+                  <>
+                    <HiOutlineClipboardCopy size={18} />
+                    <span>Copy Email</span>
+                  </>
+                )}
+              </button>
+
             </div>
 
           </div>

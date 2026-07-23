@@ -52,6 +52,10 @@ function About() {
                 {about.university}
               </p>
 
+              <p className="text-sm text-slate-500 mt-2">
+                {about.universityLocation}
+              </p>
+
               <p className="text-sm text-slate-500 mt-3">
                 {about.year}
               </p>
@@ -59,10 +63,17 @@ function About() {
 
             <div className="bg-slate-800 rounded-2xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300">
               <h4 className="font-bold text-blue-400">
-                📍Location
+                📍Current Location
               </h4>
 
-              <p>{about.location}</p>
+              <p className="text-lg font-semibold">
+                {about.currentLocation}
+              </p>
+
+              <p className="text-sm text-slate-500 mt-3">
+                {about.availability}
+              </p>
+              
             </div>
 
           </div>

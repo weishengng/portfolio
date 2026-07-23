@@ -1,4 +1,5 @@
 import awsBadge from "../assets/certifications/aws-cloud-practitioner.png";
+import googleBadge from "../assets/certifications/google-it-support-badge.png";
 
 const certifications = [
   {
@@ -25,8 +26,8 @@ const certifications = [
     id: 2,
     name: "Google IT Support Professional Certificate",
     issuer: "Google",
-    year: "2026",
-
+    year: "April 23, 2025",
+    badge: googleBadge,
     description:
       "Developed practical IT support skills including troubleshooting, networking, operating systems, system administration, and security.",
 
@@ -39,7 +40,7 @@ const certifications = [
     ],
 
     credential:
-      "https://www.credly.com/..."
+      "https://www.coursera.org/account/accomplishments/specialization/Q5014CCVBXZC"
   },
   {
     id: 3,

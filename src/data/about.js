@@ -9,11 +9,14 @@ const about = {
   ],
   education: "B.S. Information Technology",
   university: "Brigham Young University–Hawaii",
+
+  universityLocation: "Laie, Hawaii, United States",
+
   year: "2022 – 2026",
 
-  location: "Penang, Malaysia",
+  currentLocation: "Penang, Malaysia",
 
-  email: "weishengng88@gmail.com",
+  availability: "Open to opportunities in Malaysia & Singapore",
 };
 
 export default about;
