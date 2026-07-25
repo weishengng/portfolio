@@ -1,8 +1,8 @@
 import { useState } from "react";
-
+import ProjectCarousel from "./ProjectCarousel";
 import projects from "../data/projects";
-import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
+import { Navigation, Pagination } from "swiper/modules";
 
 function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -15,15 +15,10 @@ function Projects() {
           Featured Projects
         </h2>
 
-        <div className="grid lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              onLearnMore={() => setSelectedProject(project)}
-            />
-          ))}
-        </div>
+        <ProjectCarousel
+          projects={projects}
+          onProjectClick={setSelectedProject}
+        />
 
       </div>
 

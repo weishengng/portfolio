@@ -1,7 +1,7 @@
 import portfolioImg from "../assets/projects/portfolio.jpg";
 import classmateImg from "../assets/projects/classmate_directory.png";
 import campusEventImg from "../assets/projects/campus_event_connect.png";
-
+import enterpriseNetworkImg from "../assets/projects/enterprise_network.png";
 
 const projects = [
   {
@@ -104,6 +104,41 @@ const projects = [
     github: "https://github.com/weishengng/networking",
     demo: "https://weishengng.github.io/networking/",
   },
+
+  {
+    id: 4,
+
+    title: "Enterprise Network Infrastructure",
+
+    image: enterpriseNetworkImg,
+
+    featured: true,
+
+    description:
+      "Designed and implemented a secure enterprise network in Cisco Packet Tracer featuring VLAN segmentation, inter-VLAN routing, centralized services, redundancy, secure remote management, and wireless connectivity.",
+
+    features: [
+      "Designed a hierarchical network using a core switch, access switches, an internal router, and an Internet edge router.",
+      "Configured VLANs, Router-on-a-Stick, DHCP, DNS, static routing, EtherChannel, Rapid PVST+, and WPA2 wireless.",
+      "Implemented SSH, IT-only management ACLs, Port Security, Sticky MAC, PortFast, and BPDU Guard."
+    ],
+
+    tech: [
+      "Cisco Packet Tracer",
+      "VLAN",
+      "Router-on-a-Stick",
+      "DHCP",
+      "DNS",
+      "SSH",
+      "ACL",
+      "EtherChannel",
+      "Rapid PVST+"
+    ],
+
+    github: "https://github.com/weishengng/gms-enterprise-network",
+
+    demo: "#",
+  }
 ];
 
 export default projects;
