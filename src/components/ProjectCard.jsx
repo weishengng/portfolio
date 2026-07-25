@@ -21,11 +21,11 @@ function ProjectCard({ project, onLearnMore }) {
 
       <div className="flex flex-1 flex-col p-6">
 
-        <h3 className="text-2xl font-bold tracking-tight">
+        <h3 className="min-h-[72px] text-2xl font-bold tracking-tight">
           {project.title}
         </h3>
 
-        <p className="mt-4 min-h-[96px] text-slate-300">
+        <p className="mt-4 line-clamp-4 min-h-[112px] text-slate-300">
           {project.description}
         </p>
 
@@ -52,7 +52,7 @@ function ProjectCard({ project, onLearnMore }) {
         
 
         <div className="mt-auto pt-8">
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="min-h-[44px] flex flex-wrap items-center gap-3">
 
           {project.demo !== "#" && (
             <Button href={project.demo}>
@@ -74,7 +74,7 @@ function ProjectCard({ project, onLearnMore }) {
 
           <button
             onClick={onLearnMore}
-            className="text-blue-400 hover:text-blue-300 font-medium transition"
+            className="mt-5 text-blue-400 hover:text-blue-300 font-medium transition"
           >
             Learn More →
           </button>
