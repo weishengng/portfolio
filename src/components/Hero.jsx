@@ -39,20 +39,20 @@ function Hero() {
   return (
     <section 
       id="home"
-      className="min-h-screen bg-slate-950 text-white flex items-center">
+      className="min-h-screen bg-slate-950 text-white flex items-center pt-28 lg:pt-0">
       <div className="max-w-7xl mx-auto w-full px-8">
 
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
           {/* Left Side */}
 
-          <div>
+          <div className="text-center lg:text-left">
 
             <p className="text-blue-400 text-base font-semibold uppercase tracking-widest">
               👋 Hello, I'm
             </p>
 
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-black mt-4 leading-none">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mt-4 leading-none">
               Wei Sheng
             </h1>
 
@@ -64,7 +64,7 @@ function Hero() {
             <p className="mt-8 text-slate-400 text-xl leading-9 max-w-2xl">
                 Recent Information Technology graduate from Brigham Young University–Hawaii with hands-on experience in AWS, Linux, Python, SQL, and technical support. Passionate about cloud computing, IT operations, and building reliable technology solutions while continuously learning new skills.            </p>
 
-            <div className="flex flex-wrap gap-3 mt-8">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-8">
               {skills.map((skill) => (
                 <Badge key={skill}>
                   {skill}
@@ -73,7 +73,7 @@ function Hero() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4 mt-10">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-10">
 
               <Button href="#projects">
                 View Projects
@@ -90,7 +90,7 @@ function Hero() {
             </div>
 
             {/* Social Links */}
-            <div className="flex flex-wrap items-center gap-6 mt-8 text-slate-400">
+            <div className="flex flex-wrap justify-center lg:justify-start items-center gap-6 mt-8 text-slate-400">
 
               <a
                 href="https://github.com/weishengng"
