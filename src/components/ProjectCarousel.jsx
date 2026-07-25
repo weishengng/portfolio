@@ -21,48 +21,53 @@ function ProjectCarousel({ projects, onProjectClick }) {
         <ChevronRightIcon className="h-6 w-6 text-gray-700" />
       </button>
 
-        <Swiper
-          className="overflow-visible"
-          modules={[Navigation]}
-          navigation={{
-            prevEl: ".project-prev",
-            nextEl: ".project-next",
-          }}
-          loop={true}
-          breakpoints={{
-            0: {
-              slidesPerView: 1,
-              spaceBetween: 16,
-            },
-            640: {
-              slidesPerView: 1.2,
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 24,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 32,
-            },
-          }}
-          onSlideChange={(swiper) =>
-            setActiveIndex(swiper.realIndex)
-          }
-        >
-          {projects.map((project) => (
-            <SwiperSlide
-              key={project.id}
-              className="py-6"
-            >
-              <ProjectCard
-                project={project}
-                onLearnMore={() => onProjectClick(project)}
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <div className="hidden lg:block">
+
+          <Swiper
+            className="overflow-visible"
+            modules={[Navigation]}
+            navigation={{
+              prevEl: ".project-prev",
+              nextEl: ".project-next",
+            }}
+            loop={true}
+            slidesPerView={3}
+            spaceBetween={32}
+            onSlideChange={(swiper) =>
+              setActiveIndex(swiper.realIndex)
+            }
+          >
+            {projects.map((project) => (
+              <SwiperSlide
+                key={project.id}
+                className="py-6"
+              >
+                <ProjectCard
+                  project={project}
+                  onLearnMore={() => onProjectClick(project)}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        <div className="lg:hidden">
+          <Swiper
+            loop={true}
+            slidesPerView={1}
+            spaceBetween={16}
+            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+          >
+            {projects.map((project) => (
+              <SwiperSlide key={project.id} className="py-6">
+                <ProjectCard
+                  project={project}
+                  onLearnMore={() => onProjectClick(project)}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
 
         <div className="mt-8 flex justify-center gap-3">
           {projects.map((_, index) => (
@@ -79,15 +84,7 @@ function ProjectCarousel({ projects, onProjectClick }) {
         </div>
 
       {/* Mobile Arrows */}
-      <div className="mt-6 flex justify-center gap-4 md:hidden">
-        <button className="project-prev absolute -left-20 top-1/2 -translate-y-1/2 z-20 hidden lg:flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg hover:scale-110 transition">
-          <ChevronLeftIcon className="h-5 w-5" />
-        </button>
-
-        <button className="project-next absolute -right-20 top-1/2 -translate-y-1/2 z-20 hidden lg:flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg hover:scale-110 transition">
-          <ChevronRightIcon className="h-5 w-5" />
-        </button>
-      </div>
+      
     </div>
   );
 }
