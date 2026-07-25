@@ -29,8 +29,24 @@ function ProjectCarousel({ projects, onProjectClick }) {
             nextEl: ".project-next",
           }}
           loop={true}
-          slidesPerView={3}
-          spaceBetween={32}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 16,
+            },
+            640: {
+              slidesPerView: 1.2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 24,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 32,
+            },
+          }}
           onSlideChange={(swiper) =>
             setActiveIndex(swiper.realIndex)
           }
@@ -64,11 +80,11 @@ function ProjectCarousel({ projects, onProjectClick }) {
 
       {/* Mobile Arrows */}
       <div className="mt-6 flex justify-center gap-4 md:hidden">
-        <button className="project-prev absolute -left-20 top-1/2 -translate-y-1/2 z-20 hidden md:flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg hover:scale-110 transition">
+        <button className="project-prev absolute -left-20 top-1/2 -translate-y-1/2 z-20 hidden lg:flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg hover:scale-110 transition">
           <ChevronLeftIcon className="h-5 w-5" />
         </button>
 
-        <button className="project-next absolute -right-20 top-1/2 -translate-y-1/2 z-20 hidden md:flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg hover:scale-110 transition">
+        <button className="project-next absolute -right-20 top-1/2 -translate-y-1/2 z-20 hidden lg:flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg hover:scale-110 transition">
           <ChevronRightIcon className="h-5 w-5" />
         </button>
       </div>

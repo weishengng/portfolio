@@ -2,7 +2,7 @@ import { useState } from "react";
 import ProjectCarousel from "./ProjectCarousel";
 import projects from "../data/projects";
 import ProjectModal from "./ProjectModal";
-import { Navigation, Pagination } from "swiper/modules";
+
 
 function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
