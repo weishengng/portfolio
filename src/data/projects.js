@@ -7,39 +7,7 @@ const projects = [
   {
     id: 1,
 
-    title: "Portfolio Website",
-
-    image: portfolioImg,
-
-    featured: true,
-
-    description:
-      "A personal portfolio website built with React and Tailwind CSS to showcase my experience, projects, certifications, and technical skills.",
-
-    
-
-    features: [
-      "Built reusable React components for a consistent UI.",
-      "Implemented responsive layouts using Tailwind CSS.",
-      "Deployed the website with GitHub Pages."
-    ],
-
-    tech: [
-      "React",
-      "Tailwind CSS",
-      "Vite",
-      "GitHub Pages"
-    ],
-
-    github: "https://github.com/weishengng/portfolio",
-
-    demo: "https://weishengng.github.io/portfolio/",
-  },
-
-  {
-    id: 2,
-
-    title: "Campus Event Connect",
+    title: "Serverless Event Management Platform (AWS)",
 
     image: campusEventImg,
 
@@ -70,45 +38,13 @@ const projects = [
     demo: "https://www.youtube.com/watch?v=pWzVnFe8CcQ",
 
     demoText: "Watch Demo",
+    
   },
 
   {
-    id: 3,
+    id: 2,
 
-    title: "Tron Classmate Directory with AI",
-
-    image: classmateImg,
-
-    featured: true,
-
-    description:
-      "A responsive full-stack web application featuring a searchable classmate directory with an AI-powered assistant and a futuristic Tron-inspired interface.",
-
-    features: [
-      "Designed and built a responsive interface for desktop and mobile devices.",
-      "Implemented real-time classmate search with dynamic profile rendering.",
-      "Integrated an AI chatbot through a Node.js backend.",
-      "Protected AI API keys by routing requests through a backend service hosted on Render.",
-      "Focused on improving user experience through debugging and responsive design."
-    ],
-
-    tech: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Node.js",
-      "Render",
-      "REST API"
-    ],
-
-    github: "https://github.com/weishengng/networking",
-    demo: "https://weishengng.github.io/networking/",
-  },
-
-  {
-    id: 4,
-
-    title: "Enterprise Network Infrastructure",
+    title: "Enterprise Network Infrastructure Lab",
 
     image: enterpriseNetworkImg,
 
@@ -138,6 +74,72 @@ const projects = [
     github: "https://github.com/weishengng/gms-enterprise-network",
 
     demo: "#",
+  },
+
+  {
+    id: 3,
+
+    title: "Professional Portfolio Website",
+
+    image: portfolioImg,
+
+    featured: true,
+
+    description:
+      "A personal portfolio website built with React and Tailwind CSS to showcase my experience, projects, certifications, and technical skills.",
+
+    
+
+    features: [
+      "Built reusable React components for a consistent UI.",
+      "Implemented responsive layouts using Tailwind CSS.",
+      "Deployed the website with GitHub Pages."
+    ],
+
+    tech: [
+      "React",
+      "Tailwind CSS",
+      "Vite",
+      "GitHub Pages"
+    ],
+
+    github: "https://github.com/weishengng/portfolio",
+
+    demo: "https://weishengng.github.io/portfolio/",
+    
+  },
+
+  {
+    id: 4,
+
+    title: "AI-Powered Student Directory Platform",
+
+    image: classmateImg,
+
+    featured: true,
+
+    description:
+      "A responsive full-stack web application featuring a searchable classmate directory with an AI-powered assistant and a futuristic Tron-inspired interface.",
+
+    features: [
+      "Designed and built a responsive interface for desktop and mobile devices.",
+      "Implemented real-time classmate search with dynamic profile rendering.",
+      "Integrated an AI chatbot through a Node.js backend.",
+      "Protected AI API keys by routing requests through a backend service hosted on Render.",
+      "Focused on improving user experience through debugging and responsive design."
+    ],
+
+    tech: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "Render",
+      "REST API"
+    ],
+
+    github: "https://github.com/weishengng/networking",
+    demo: "https://weishengng.github.io/networking/",
   }
 ];
 
